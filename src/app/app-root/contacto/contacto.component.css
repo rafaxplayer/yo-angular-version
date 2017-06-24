@@ -1,0 +1,64 @@
+.contacto{
+	color: #696363;
+	background: black;
+	justify-content: center;
+	padding: 20px;
+	width: 60%;
+    flex-direction: column;
+}
+.contacto form{
+	display: flex;
+	flex:1;
+	flex-direction: column;
+	
+}
+.contacto form input,.contacto form textarea{
+	padding: 10px;
+	margin-bottom: 20px;
+	color: #fff;
+    border-color: #fff;
+    border-width: 2px !important;
+    background-color: transparent;
+	
+}
+.contacto form input:first-of-type,
+.contacto form textarea{
+	text-transform: capitalize;
+}
+.contacto .buttons{
+	display: flex;
+	justify-content: space-between;
+	
+	
+
+}
+.contacto .buttons > *{
+	cursor: pointer;
+	transition: all .6s;
+}
+.contacto .buttons button{
+	background: #ffb300;
+	color: #fff;
+	padding: 10px 30px;
+	border: none;
+	text-align: center;
+	max-width: 100px;
+	
+}
+.contacto .buttons button:disabled{
+	background: #333;
+}
+.contacto .buttons button:hover{
+	background: #333;
+	color:white;
+}
+
+.contacto .buttons i:hover{
+	color:#ffb300;
+}
+.has-error {
+	margin: -10px 0 15px 0;;
+    padding: 10px;
+	border-left: 2px solid #c50d0d !important;
+    
+}

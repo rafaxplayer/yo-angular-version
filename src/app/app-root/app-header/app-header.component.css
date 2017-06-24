@@ -1,0 +1,29 @@
+header{
+    background: black;
+    height:50px;
+	overflow: hidden;
+}
+header nav{
+    
+	display:flex;
+}
+header nav ul{
+	list-style: none;
+	display: inline-flex;
+	margin: 10px;
+}
+header nav ul li{
+	cursor: pointer;
+	display: inline-flex;
+	transition: all .8s;
+	word-break: keep-all;
+}
+
+header nav ul li:hover{
+	background: gray;
+	color:black;
+}
+header nav ul li>a{
+	padding: 5px 10px;
+	
+}

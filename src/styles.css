@@ -1,1 +1,255 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/css/font-awesome.min.css';
+
+*{
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: url('./assets/images/back.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+ul{
+	list-style: none;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+span,a,h1{
+	color:#ffb300;
+}
+
+section{
+    background:black;
+    display: flex;
+    position: relative;
+	margin-top: 50px;
+}
+.container{
+	margin:20px 0;
+    width: 100%;
+   	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:650px){
+    
+	nav{
+		justify-content: center;
+		
+	}
+	nav ul>li{
+		text-align: center;
+	}
+	.targeta,
+	.contacto,
+	.portafolio,
+	.targeta .social{
+        width:90% !important;
+    }
+	.container{
+		height: initial;
+	}
+	section{
+		margin-top: 30px;
+	}
+	.targeta .info{
+		flex-direction: column;
+		justify-content: inherit;
+	}
+	
+	.targeta .info picture{
+    	width: 120px;
+    	height: 120px;
+    	margin: 10px;
+	}
+	.portafolio{
+		padding: 20px 0;
+	}
+    
+}
+
+/*Icon effect*/
+
+.hi-icon-wrap {
+	text-align: center;
+	padding: 2em 0 3em;
+}
+
+.hi-icon {
+	display: inline-block;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 15px;
+}
+
+.hi-icon:after {
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	content: '';
+	-webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+}
+
+.hi-icon:before {
+	
+	line-height: 60px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Effect 8 */
+.hi-icon-effect-8 .hi-icon {
+	background: rgba(255,255,255,0.1);
+	-webkit-transition: -webkit-transform ease-out 0.1s, background 0.2s;
+	-moz-transition: -moz-transform ease-out 0.1s, background 0.2s;
+	transition: transform ease-out 0.1s, background 0.2s;
+}
+
+.hi-icon-effect-8 .hi-icon:after {
+	top: 0;
+	left: 0;
+	padding: 0;
+	z-index: -1;
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+	opacity: 0;
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.hi-icon-effect-8 .hi-icon:hover {
+	background: rgba(255,255,255,0.05);
+	-webkit-transform: scale(0.93);
+	-moz-transform: scale(0.93);
+	-ms-transform: scale(0.93);
+	transform: scale(0.93);
+	color: #fff;
+}
+
+.hi-icon-effect-8 .hi-icon:hover:after {
+	-webkit-animation: sonarEffect 1.3s ease-out 75ms;
+	-moz-animation: sonarEffect 1.3s ease-out 75ms;
+	animation: sonarEffect 1.3s ease-out 75ms;
+}
+
+/*Animations keyframes*/
+@-webkit-keyframes scaleIcon{
+	0% {
+		-webkit-transform: scale(0.5);
+		opacity: 0.1;
+	}
+	80%{
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+	90%{
+		-webkit-transform: scale(.9);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+@-moz-keyframes scaleIcon{
+	0% {
+		-moz-transform: scale(0.5);
+		opacity: 0.1;
+	}
+	80%{
+		-moz-transform: scale(1);
+		opacity: 1;
+	}
+	90%{
+		-moz-transform: scale(.9);
+		opacity: 1;
+	}
+	100% {
+		-moz-transform: scale(1);
+		opacity: 1;
+	}
+}
+@keyframes scaleIcon{
+	0% {
+		transform: scale(0.5);
+		opacity: 0.1;
+	}
+	80%{
+		transform: scale(1);
+		opacity: 1;
+	}
+	90%{
+		transform: scale(.9);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes sonarEffect{
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+		-webkit-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes sonarEffect {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+		-moz-transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+@keyframes sonarEffect {
+	0% {
+		opacity: 0.3;
+	}
+	40% {
+		opacity: 0.5;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}

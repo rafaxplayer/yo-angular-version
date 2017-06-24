@@ -1,0 +1,40 @@
+<div class="container">
+  <section class="contacto">
+    <h3>Contacta Conmigo</h3>
+    <form id="contacto" #contactForm="ngForm" novalidate (ngSubmit)="onSubmit(contactForm)" autocomplete="off">
+      <input type="text"  name="name" placeholder="Tu Nombre" minlength="4" maxlength="30" ngModel required #name="ngModel">
+      <div *ngIf="name.errors && (name.dirty || name.touched)" class="has-error">
+        <div *ngIf="name.errors.required">
+          Nombre es requerido.
+        </div>
+        <div *ngIf="name.errors.minlength">
+          Nombre debe ser minimo 4 caracteres.
+        </div>
+        <div *ngIf="name.errors.maxlength">
+          Nombre debe ser max 30 caracteres.
+        </div>
+      </div>
+      <input type="email" name="email" placeholder="Tu Email" pattern={{email_regex}} ngModel required #email="ngModel">
+      
+      <div *ngIf="email.errors && (email.dirty || email.touched)" class="has-error">
+        
+        <div *ngIf="email.errors.required">
+          Email es requerido.
+        </div>
+        <div *ngIf="email.errors.pattern">
+          Email tiene un formato invalido.
+        </div>
+      </div>
+      <textarea  name="message" placeholder="Tu Mensage" ngModel required #message="ngModel"></textarea>
+      <div *ngIf="message.errors && (message.dirty || message.touched)" class="has-error">
+        <div *ngIf="message.errors.required">
+          Message es requerido.
+        </div>
+      </div>
+      <div class="buttons">
+        <button [disabled]="!contactForm.valid">Enviar</button><i (click)="reset()" title="Limpiar formulario" class="fa fa-window-maximize" aria-hidden="true"></i>
+      </div>
+    </form>
+    
+  </section>
+</div>

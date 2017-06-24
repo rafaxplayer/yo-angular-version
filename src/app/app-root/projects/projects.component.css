@@ -1,0 +1,83 @@
+.portafolio{
+	
+	padding:40px;
+}
+.portafolio ul{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	color:gainsboro;
+}
+.portafolio ul li{
+	display: flex;
+	align-items: flex-start;
+	margin:0 20px;
+	position: relative;
+	color:#696363;
+}
+.portafolio ul li .icon-back{
+	background: #252525;
+	width: 64px;
+	height: 64px;
+	line-height: 74px;
+	text-align: center;
+	border-radius: 50%;
+	z-index: 9999;
+	position: absolute;
+	-webkit-transform: scale(1);
+	 transform: scale(1);
+	 opacity: 1;
+	-webkit-animation: scaleIcon .7s ease-in;
+    animation: scaleIcon .7s ease-in;
+   
+}
+
+.portafolio ul li .icon-back>i{
+	font-size: 30px;
+	color: #b7adad;
+}
+.portafolio ul li article{
+	display: flex;
+    max-width: 500px;
+    flex-direction: column;
+    margin: 0 0 20px 99px;
+    max-width: 600px;
+	
+}
+.portafolio ul li article h3{
+	font-size:1.5em; 
+	margin-top:15px;
+	color:white;
+	font-weight: lighter;
+	
+}
+.portafolio ul li article p{
+	font-size: 1em;
+	margin: 0 5px;
+}
+.portafolio ul li article .fa-angle-down,
+.portafolio ul li article .fa-angle-up{
+	cursor: pointer;
+	margin: 0 auto;
+	
+}
+.portafolio ul li .timeline{
+	width: 1px;
+	height: 100%;
+	border-right-width: 1px;
+    border-right-style: dashed;
+	position: absolute;
+	top: 0px;
+	left: 30px;
+	color: #352e2e;
+}
+.portafolio ul li article .spoiler{
+	display: none;
+	margin-top: 10px;
+	
+}
+
+.portafolio ul li article .spoiler a{
+	padding: 5px 10px;
+	display: block;
+}

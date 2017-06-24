@@ -1,0 +1,20 @@
+.notfound{
+	padding: 30px 80px;
+	text-align: center;
+	color:whitesmoke;
+	flex-direction: column;
+
+}
+.notfound h2{
+	font-size: 10em;
+	margin: 0;
+}
+.notfound p{
+	margin: 0;
+	color: #b7adad;
+	font-size: 2em;
+}
+.notfound i{
+	font-size: 5em;
+	margin: 20px;
+}
