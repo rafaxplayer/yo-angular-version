@@ -1,5 +1,4 @@
-@import './assets/css/font-awesome.min.css';
-
+/*@import "../node_modules/font-awesome/css/font-awesome.min.css";*/
 *{
     box-sizing: border-box;
 }
@@ -71,7 +70,18 @@ section{
     	margin: 10px;
 	}
 	.portafolio{
-		padding: 20px 0;
+		padding: 10px !important;
+	}
+	.portafolio ul li article{
+		margin: 0 !important;
+	}
+	.portafolio ul li .icon-back{
+		left:-40px;
+		display:none;
+	}
+	.portafolio ul li .timeline{
+		display:none;
+		left:-10px !important;
 	}
     
 }

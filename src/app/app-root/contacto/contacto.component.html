@@ -14,14 +14,14 @@
           Nombre debe ser max 30 caracteres.
         </div>
       </div>
-      <input type="email" name="email" placeholder="Tu Email" pattern={{email_regex}} ngModel required #email="ngModel">
+      <input type="email" name="email" placeholder="Tu Email" appEmailValidator ngModel required #email="ngModel">
       
       <div *ngIf="email.errors && (email.dirty || email.touched)" class="has-error">
         
         <div *ngIf="email.errors.required">
           Email es requerido.
         </div>
-        <div *ngIf="email.errors.pattern">
+        <div *ngIf="email.errors.validEmail">
           Email tiene un formato invalido.
         </div>
       </div>
@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="buttons">
-        <button [disabled]="!contactForm.valid">Enviar</button><i (click)="reset()" title="Limpiar formulario" class="fa fa-window-maximize" aria-hidden="true"></i>
+        <button [disabled]="!contactForm.valid">Enviar</button><i (click)="reset(contactForm)" title="Limpiar formulario" class="fa fa-window-maximize" aria-hidden="true"></i>
       </div>
     </form>
     

@@ -11,6 +11,7 @@ header nav ul{
 	list-style: none;
 	display: inline-flex;
 	margin: 10px;
+	position:relative;
 }
 header nav ul li{
 	cursor: pointer;
@@ -18,10 +19,15 @@ header nav ul li{
 	transition: all .8s;
 	word-break: keep-all;
 }
+header nav ul li a.active-link{
+	color:white;
+	border-bottom: solid 1px grey;
+}
 
 header nav ul li:hover{
 	background: gray;
 	color:black;
+	
 }
 header nav ul li>a{
 	padding: 5px 10px;

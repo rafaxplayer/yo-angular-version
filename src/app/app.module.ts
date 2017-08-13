@@ -8,6 +8,7 @@ import { InicioComponent } from './app-root/inicio/inicio.component';
 import { ProjectsComponent } from './app-root/projects/projects.component';
 import { ContactoComponent } from './app-root/contacto/contacto.component';
 import { NotfoundComponent } from './app-root/notfound/notfound.component';
+import { EmailValidatorDirective } from './directives/email-validator.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NotfoundComponent } from './app-root/notfound/notfound.component';
     InicioComponent,
     ProjectsComponent,
     ContactoComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    EmailValidatorDirective
   ],
   imports: [
     BrowserModule,

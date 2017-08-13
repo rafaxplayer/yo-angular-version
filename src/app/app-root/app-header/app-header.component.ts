@@ -5,10 +5,8 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <header>
       <nav>
-        <ul>
-          <li><a routerLink="/">Acerca de mi</a></li>
-          <li><a routerLink="/projects">Proyectos</a></li>
-          <li><a routerLink="/contact">Contacto</a></li>
+        <ul *ngFor="let route of routes; let i = index">
+          <li><a [routerLink]="route.path" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">{{route.name}}</a></li>
         </ul>
       </nav>
     </header>
@@ -16,9 +14,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-header.component.css']
 })
 export class AppHeaderComponent{
-  
-  constructor() { 
 
-  }
+  public routes = [
+    {path:'/',name:'Acerca de mi'},
+    {path:'/projects',name:'Projectos'},
+    {path:'/contact',name:'Contacto'}
+  ]
+  
 
 }
